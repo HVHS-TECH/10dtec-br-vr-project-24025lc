@@ -8,14 +8,23 @@
   </head>
     <body>
     <a-scene>
-      <a-sky color="lightblue"></a-sky>
+      <a-sky color="red"></a-sky>
       
        <!-- Put this inside the <a-scene> -->
       <a-entity 
-      ply-model="src:Bear.ply"
+      rotation="-90 270 90" 
       position="-4 -1.5 -4"
-      rotation="-90 270 90"
-      ></a-entity>
+      animation="
+      property: position;
+      from: -4 -1.5 -4;
+      to: 4 -1.5 -2;
+      dur: 1000;
+      loop: true;
+      dir:alternate
+      "
+      ply-model="src:Bear.ply"
+      ></a-entity> 
+      
 
       <a-sky color="lightblue"></a-sky>
       
@@ -24,6 +33,12 @@
       ply-model="src:Jungle Landscape.ply"
       position="0 -2 -1"
       rotation="-90 0 90"
+      ></a-entity>
+
+      <a-entity 
+      ply-model="src:Voxel Fish.ply"
+      position="-7 -2 -8"
+      rotation="-90 0 900"
       ></a-entity>
                  
     </a-scene>
